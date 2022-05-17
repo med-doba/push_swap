@@ -4,7 +4,7 @@ CC= gcc
 
 CFLAGS= -Wall -Wextra -Werror
 
-SRC= push_swap.c utils/ft_digits.c utils/ft_duplicate.c
+SRC= push_swap.c utils/ft_calculate.c utils/ft_double.c utils/ft_free_all.c
 
 INC= push_swap.h
 
