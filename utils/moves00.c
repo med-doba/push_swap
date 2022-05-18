@@ -6,27 +6,24 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:03:00 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/17 20:10:15 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 17:29:31 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_allocation(t_ps *stack_a, int l)
+t_ps	*ft_allocation(char **av)
 {
 	int		i;
 	t_ps	*head;
-	t_ps	*node;
+	t_ps	*tmp;
 
-	i = 0;
-	head = (t_ps *)malloc(sizeof(t_ps) * 1);
-	head->data = 5;
-	head->next = NULL;
-	while (i < l)
+	i = 1;
+	head = ft_node_create(ft_atoi(av[i]));
+	while (av[++i] != NULL)
 	{
-		node = (t_ps *)malloc(sizeof(t_ps) * 1);
-		node->data = 5;
-		ft_add_front(head);
-		i++;
+		tmp = head;
+		ft_lstadd_back_ps(&tmp, ft_node_create(ft_atoi(av[i])));
 	}
+	return (head);
 }

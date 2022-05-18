@@ -6,13 +6,13 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 17:14:57 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/17 18:11:18 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:21:15 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_double(char **stack, t_list *my, int k)
+int	*ft_double(char **stack, t_var *my, int k)
 {
 	my->i = 1;
 	my->x = 0;
@@ -24,7 +24,6 @@ void	ft_double(char **stack, t_list *my, int k)
 		while (my->ptr[my->j] != NULL)
 		{
 			my->y = ft_atoi(my->ptr[my->j]);
-			ft_printf("%s\n", my->ptr[my->j]);
 			my->h = 0;
 			while (my->h < my->x)
 			{
@@ -44,4 +43,5 @@ void	ft_double(char **stack, t_list *my, int k)
 		}
 		my->i++;
 	}
+	return (my->nbr);
 }

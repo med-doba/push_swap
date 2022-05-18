@@ -6,24 +6,11 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/17 19:56:07 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:24:11 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// void	free_all(char **str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 	{
-// 		free(str[i]);
-// 		i++;
-// 	}
-// 	free(str);
-// }
 
 void	ft_ft(char *stack)
 {
@@ -34,10 +21,16 @@ void	ft_ft(char *stack)
 	i = 0;
 	j = 0;
 	if (stack[i] == '\0')
+	{
+		ft_printf("stack[i] == '\0'\n");
 		exit (1);
+	}
 	str = ft_split(stack, ' ');
 	if (str == NULL)
+	{
+		ft_printf("str == NULL\n");
 		exit(1);
+	}
 	while (str[i] != NULL)
 	{
 		j = 0;
@@ -46,7 +39,10 @@ void	ft_ft(char *stack)
 		while(str[i][j] != '\0' )
 		{
 			if (ft_isdigit(str[i][j]) == 1)
+			{
+				ft_printf("ft_isdigit(str[i][j]) == 1\n");
 				exit(1);
+			}
 			j++;
 		}
 		i++;
@@ -57,13 +53,17 @@ void	ft_ft(char *stack)
 int	main(int ac, char *av[])
 {
 	int	i;
-	t_list	*my;
+	t_var	*my;
+	t_ps	*head;
 
 	i = 1;
-	my = (t_list *) malloc (sizeof(t_list) * 1);
+	my = (t_var *) malloc (sizeof(t_var) * 1);
 	my->n = 0;
 	if (my == NULL)
+	{
+		printf("hamboula\n");
 		exit (1);
+	}
 	if (ac == 1)
 	{
 		ft_printf("must an arg\n");
@@ -76,6 +76,7 @@ int	main(int ac, char *av[])
 		i++;
 	}
 	ft_double(av, my, my->n);
-	ft_printf("%d\n", my->n);
+	ft_printf("%i", ft_double(av, my, my->n));
+	head = ft_allocation(av);
 	return (0);
 }

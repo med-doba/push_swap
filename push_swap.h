@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/17 20:00:52 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:24:25 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
 
-typedef struct p_list{
+typedef struct p_var{
 	char	**ptr;
 	char	*str;
 	int		*nbr;
@@ -28,11 +28,11 @@ typedef struct p_list{
 	int		x;
 	int		y;
 	int		h;
-}t_list;
+}t_var;
 
 typedef struct node{
 	int					data;
-	struct push_swap	*next;
+	struct node	*next;
 }t_ps;
 
 int		ft_digits(char *stack);
@@ -40,7 +40,16 @@ int		ft_nbr(char str);
 int		ft_duplicate(char *stack);
 int		ft_signe(char *stack);
 int		ft_calculate(char *str);
-void	ft_double(char **stack, t_list *my, int k);
+int		*ft_double(char **stack, t_var *my, int k);
 void	ft_free_all(char **str);
+//node
+t_ps	*ft_node_create(int data);
+int		ft_lstsize_ps(t_ps *lst);
+t_ps	*ft_lstlast_ps(t_ps *lst);
+void	ft_lstdelone_ps(t_ps *lst, void (*del)(void *));
+void	ft_lstclear_ps(t_ps **lst, void (*del)(void*));
+void	ft_lstadd_front_ps(t_ps **lst, t_ps *new);
+void	ft_lstadd_back_ps(t_ps **lst, t_ps *new);
+t_ps	*ft_allocation(char **av);
 
 #endif
