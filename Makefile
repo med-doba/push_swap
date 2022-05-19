@@ -20,7 +20,7 @@ PRINTF= ft_printf/libftprintf.a
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(PRINTF) $(OBJ)
-	@$(CC) $(CFLAGS) $(LIBFT) $(PRINTF) $(OBJ) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(PRINTF) -o $(NAME)
 
 $(LIBFT):
 	@make -C libft

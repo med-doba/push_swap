@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 19:24:11 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:45:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int	main(int ac, char *av[])
 {
 	int	i;
 	t_var	*my;
+	int	*tab;
 	t_ps	*head;
 
 	i = 1;
@@ -75,8 +76,13 @@ int	main(int ac, char *av[])
 		my->n += ft_calculate(av[i]);
 		i++;
 	}
-	ft_double(av, my, my->n);
-	ft_printf("%i", ft_double(av, my, my->n));
-	head = ft_allocation(av);
+	tab = ft_double(av, my, my->n);
+	head = ft_allocation(my->n, tab);
+	free(tab);
+	while(head != NULL)
+	{
+		ft_printf("%d\n", head->data);
+		head = head->next;
+	}
 	return (0);
 }

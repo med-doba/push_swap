@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_double.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 17:14:57 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 19:21:15 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:44:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	*ft_double(char **stack, t_var *my, int k)
 				}
 				my->h++;
 			}
-			if (my->x == my->j)
+			if (my->x == my->h)
 			{
 				my->nbr[my->x] = my->y;
 				my->x++;

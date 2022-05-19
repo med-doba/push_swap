@@ -14,13 +14,11 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		j;
-	int		i;
 	char	*hub;
 
 	if (!s1 || !set)
 		return (NULL);
 	j = 0;
-	i = 0;
 	while (ft_strchr(set, *s1) && *s1 != '\0')
 		s1++;
 	j = ft_strlen(s1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 19:24:25 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:37:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ void	ft_lstdelone_ps(t_ps *lst, void (*del)(void *));
 void	ft_lstclear_ps(t_ps **lst, void (*del)(void*));
 void	ft_lstadd_front_ps(t_ps **lst, t_ps *new);
 void	ft_lstadd_back_ps(t_ps **lst, t_ps *new);
-t_ps	*ft_allocation(char **av);
+t_ps	*ft_allocation(int size, int *tab);
 
 #endif
