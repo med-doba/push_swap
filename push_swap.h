@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 21:37:47 by marvin           ###   ########.fr       */
+/*   Updated: 2022/05/19 13:35:46 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct p_var{
 }t_var;
 
 typedef struct node{
-	int					data;
+	int			data;
 	struct node	*next;
 }t_ps;
 
@@ -51,5 +51,6 @@ void	ft_lstclear_ps(t_ps **lst, void (*del)(void*));
 void	ft_lstadd_front_ps(t_ps **lst, t_ps *new);
 void	ft_lstadd_back_ps(t_ps **lst, t_ps *new);
 t_ps	*ft_allocation(int size, int *tab);
+int		ft_order(int *nbr, int n);
 
 #endif

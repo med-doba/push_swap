@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 21:45:06 by marvin           ###   ########.fr       */
+/*   Updated: 2022/05/19 13:38:41 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,33 +50,42 @@ void	ft_ft(char *stack)
 	ft_free_all(str);
 }
 
-int	main(int ac, char *av[])
+int	ft_test(int ac, char **av)
 {
 	int	i;
-	t_var	*my;
-	int	*tab;
-	t_ps	*head;
+	int	x;
 
 	i = 1;
-	my = (t_var *) malloc (sizeof(t_var) * 1);
-	my->n = 0;
-	if (my == NULL)
+	x = 0;
+	while (ac-- -1)
 	{
-		printf("hamboula\n");
-		exit (1);
+		ft_ft(av[i]);
+		x += ft_calculate(av[i]);
+		i++;
 	}
+	return (x);
+}
+
+int	main(int ac, char *av[])
+{
+	t_var	*my;
+	t_ps	*head;
+	int		*tab;
+
+	my = (t_var *) malloc (sizeof(t_var) * 1);
+	if (my == NULL)
+		exit (1);
 	if (ac == 1)
 	{
 		ft_printf("must an arg\n");
 		exit(1);
 	}
-	while (ac-- - 1)
-	{
-		ft_ft(av[i]);
-		my->n += ft_calculate(av[i]);
-		i++;
-	}
+	my->n = ft_test(ac, av);
+	if (my->n == 1)
+		return (0);
 	tab = ft_double(av, my, my->n);
+	if (ft_order(tab, my->n) == 0)
+		return (free(tab), free(my), 0);
 	head = ft_allocation(my->n, tab);
 	free(tab);
 	while(head != NULL)

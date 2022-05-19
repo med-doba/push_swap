@@ -5,9 +5,10 @@ CC= gcc
 CFLAGS= -Wall -Wextra -Werror
 
 SRC= push_swap.c utils/ft_calculate.c utils/ft_double.c \
-	utils/ft_free_all.c utils/moves00.c utils/ft_node_create.c \
-	utils/ft_lstsize_ps.c utils/ft_lstlast_ps.c utils/ft_lstdelone_ps.c \
-	utils/ft_lstclear_ps.c utils/ft_lstadd_front_ps.c utils/ft_lstadd_back_ps.c
+	utils/ft_free_all.c node/moves00.c node/ft_node_create.c \
+	node/ft_lstsize_ps.c node/ft_lstlast_ps.c node/ft_lstdelone_ps.c \
+	node/ft_lstclear_ps.c node/ft_lstadd_front_ps.c node/ft_lstadd_back_ps.c \
+	utils/ft_order.c moves/ft_moves01.c
 
 INC= push_swap.h
 
