@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/19 13:38:41 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/20 18:22:32 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int	main(int ac, char *av[])
 		return (free(tab), free(my), 0);
 	head = ft_allocation(my->n, tab);
 	free(tab);
+	ft_sa(&head, 1);
 	while(head != NULL)
 	{
 		ft_printf("%d\n", head->data);

@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/19 13:35:46 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/20 18:24:01 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,9 @@ void	ft_lstadd_front_ps(t_ps **lst, t_ps *new);
 void	ft_lstadd_back_ps(t_ps **lst, t_ps *new);
 t_ps	*ft_allocation(int size, int *tab);
 int		ft_order(int *nbr, int n);
-
+void	ft_push(t_ps **head, t_ps *add);
+t_ps	*ft_pop(t_ps **stack);
+void	ft_sa(t_ps **stack_a, int yes);
+void	ft_sb(t_ps *stack_b, int yes);
+void	ft_ss(t_ps *stack_a, t_ps *stack_b, int yes);
 #endif

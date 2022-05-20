@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_moves01.c                                       :+:      :+:    :+:   */
+/*   ft_sb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 13:33:12 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/19 19:00:20 by med-doba         ###   ########.fr       */
+/*   Created: 2022/05/20 17:49:06 by med-doba          #+#    #+#             */
+/*   Updated: 2022/05/20 18:24:38 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_ps	ft_sa(t_ps *stack_a)
+void	ft_sb(t_ps *stack_b, int yes)
 {
-	t_ps *tmp1 = pop(stack_a);
-	t_ps *tmp2 = pop(stack_a);
-	push(stack_a, tmp1);
-	push(stack_a, tmp2);
+	t_ps *tmp1 = ft_pop(&stack_b);
+	t_ps *tmp2 = ft_pop(&stack_b);
+	ft_push(&stack_b, tmp1);
+	ft_push(&stack_b, tmp2);
+	if (yes == 1)
+		ft_printf("sb\n");
 }
