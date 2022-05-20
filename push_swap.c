@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/20 18:22:32 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/20 18:53:49 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,9 @@ int	ft_test(int ac, char **av)
 int	main(int ac, char *av[])
 {
 	t_var	*my;
-	t_ps	*head;
-	int		*tab;
+	t_ps	*head_a;
+	t_ps	*head_b;
+	int		*tab_a;
 
 	my = (t_var *) malloc (sizeof(t_var) * 1);
 	if (my == NULL)
@@ -83,16 +84,21 @@ int	main(int ac, char *av[])
 	my->n = ft_test(ac, av);
 	if (my->n == 1)
 		return (0);
-	tab = ft_double(av, my, my->n);
-	if (ft_order(tab, my->n) == 0)
-		return (free(tab), free(my), 0);
-	head = ft_allocation(my->n, tab);
-	free(tab);
-	ft_sa(&head, 1);
-	while(head != NULL)
+	tab_a = ft_double(av, my, my->n);
+	if (ft_order(tab_a, my->n) == 0)
+		return (free(tab_a), free(my), 0);
+	head_a = ft_allocation(my->n, tab_a);
+	free(tab_a);
+	ft_pb(&head_a, &head_b);
+	while(head_a != NULL)
 	{
-		ft_printf("%d\n", head->data);
-		head = head->next;
+		ft_printf("stack a%d\n", head_a->data);
+		head_a = head_a->next;
+	}
+	while(head_b != NULL)
+	{
+		ft_printf("stack b%d\n", head_b->data);
+		head_b = head_b->next;
 	}
 	return (0);
 }
