@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 18:33:44 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/21 22:51:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_lstclear_ps(t_ps **lst, void (*del)(void*));
 void	ft_lstadd_front_ps(t_ps **lst, t_ps *new);
 void	ft_lstadd_back_ps(t_ps **lst, t_ps *new);
 t_ps	*ft_allocation(int size, int *tab);
-int		ft_order(int *nbr, int n);
+int		ft_order(t_ps *node);
 void	ft_push(t_ps **head, t_ps *add);
 t_ps	*ft_pop(t_ps **stack);
 void	ft_sa(t_ps **stack_a, int yes);
@@ -65,4 +65,5 @@ void	ft_rr(t_ps **stack_a, t_ps **stack_b, int yes);
 void	ft_rra(t_ps **stack_a, int yes);
 void	ft_rrb(t_ps **stack_a, int yes);
 void	ft_rrr(t_ps **stack_a, t_ps **stack_b, int yes);
+void	ft_ratb(t_ps **stack_a);
 #endif

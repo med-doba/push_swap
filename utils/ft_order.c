@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_order.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 11:51:21 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/19 12:17:58 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/21 22:50:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_order(int *nbr, int n)
+int	ft_order(t_ps *node)
 {
-	int i;
-
-	i = 0;
-	while (i < n - 1)
+	while (node->next != NULL)
 	{
-		if (nbr[i] < nbr[i + 1])
-			i++;
-		else
+		if (node->data > node->next->data)
 			return (1);
+		node = node->next;
 	}
 	return (0);
 }

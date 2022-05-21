@@ -10,7 +10,7 @@ SRC= push_swap.c utils/ft_calculate.c utils/ft_double.c \
 	node/ft_lstclear_ps.c node/ft_lstadd_front_ps.c node/ft_lstadd_back_ps.c \
 	node/ft_pop.c node/ft_push.c utils/ft_order.c moves/ft_sa.c moves/ft_sb.c \
 	moves/ft_pb.c moves/ft_pa.c moves/ft_ss.c moves/ft_ra.c moves/ft_rb.c moves/ft_rra.c moves/ft_rrb.c \
-	moves/ft_rrr.c
+	moves/ft_rrr.c algorithme/algo.c
 
 INC= push_swap.h
 

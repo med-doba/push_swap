@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 18:29:11 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/21 22:54:26 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,24 +86,25 @@ int	main(int ac, char *av[])
 	if (my->n == 1)
 		return (0);
 	tab_a = ft_double(av, my, my->n);
-	if (ft_order(tab_a, my->n) == 0)
-		return (free(tab_a), free(my), 0);
 	head_a = ft_allocation(my->n, tab_a);
 	free(tab_a);
+	if (ft_order(head_a) == 0)
+		return (free(my), 0);
 	// ft_pa(&head_a, &head_b, 1);
 	// ft_pb(&head_a, &head_b, 1);
 	// ft_rb(&head_a, 1);
-	ft_rrb(&head_a, 1);
+	// ft_rrb(&head_a, 1);
 	// ft_printf("%d\n", ft_lstsize_ps(head_a));
+	ft_ratb(&head_a);
 	while(head_a != NULL)
 	{
 		ft_printf("stack_a: %d\n", head_a->data);
 		head_a = head_a->next;
 	}
-	// while(head_b != NULL)
-	// {
-	// 	ft_printf("stack_b: %d\n", head_b->data);
-	// 	head_b = head_b->next;
-	// }
+	while(head_b != NULL)
+	{
+		ft_printf("stack_b: %d\n", head_b->data);
+		head_b = head_b->next;
+	}
 	return (0);
 }
