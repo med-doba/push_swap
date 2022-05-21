@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_ps.c                                    :+:      :+:    :+:   */
+/*   ft_rb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 19:32:47 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 17:45:26 by med-doba         ###   ########.fr       */
+/*   Created: 2022/05/21 16:21:06 by med-doba          #+#    #+#             */
+/*   Updated: 2022/05/21 16:46:29 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int ft_lstsize_ps(t_ps *lst)
+void	ft_rb(t_ps **stack_b, int yes)
 {
-	int	i;
+	t_ps	*tmp;
+	t_ps	*head;
 
-	i = 0;
-	while(lst)
+	tmp = ft_pop(stack_b);
+	head = *stack_b;
+	while ((*stack_b)->next != NULL)
+		*stack_b = (*stack_b)->next;
+	if ((*stack_b)->next == NULL)
 	{
-		i++;
-		lst = lst->next;
+		(*stack_b)->next = tmp;
+		tmp->next = NULL;
 	}
-	return (i);
+	*stack_b = head;
+	if (yes ==1)
+		ft_printf("rb\n");
 }

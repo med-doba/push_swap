@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/20 19:04:49 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/21 17:32:07 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	main(int ac, char *av[])
 	t_ps	*head_b;
 	int		*tab_a;
 
-	// head_b = NULL;
+	head_b = NULL;
 	my = (t_var *) malloc (sizeof(t_var) * 1);
 	if (my == NULL)
 		exit (1);
@@ -90,16 +90,19 @@ int	main(int ac, char *av[])
 		return (free(tab_a), free(my), 0);
 	head_a = ft_allocation(my->n, tab_a);
 	free(tab_a);
-	ft_pa(&head_a, &head_b);
+	// ft_pa(&head_a, &head_b, 1);
+	// ft_pb(&head_a, &head_b, 1);
+	// ft_rb(&head_a, 1);
+	ft_rra(&head_a, 1);
 	while(head_a != NULL)
 	{
-		ft_printf("stack a%d\n", head_a->data);
+		ft_printf("stack_a: %d\n", head_a->data);
 		head_a = head_a->next;
 	}
-	while(head_b != NULL)
-	{
-		ft_printf("stack b%d\n", head_b->data);
-		head_b = head_b->next;
-	}
+	// while(head_b != NULL)
+	// {
+	// 	ft_printf("stack_b: %d\n", head_b->data);
+	// 	head_b = head_b->next;
+	// }
 	return (0);
 }
