@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rra.c                                           :+:      :+:    :+:   */
+/*   ft_rrb.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/21 16:53:11 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 18:11:59 by med-doba         ###   ########.fr       */
+/*   Created: 2022/05/21 18:13:28 by med-doba          #+#    #+#             */
+/*   Updated: 2022/05/21 18:25:11 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_rra(t_ps **stack_a, int yes)
+void	ft_rrb(t_ps **stack_b, int yes)
 {
+	t_ps	*top;
+	t_ps	*last;
 	int		l;
 	int		i;
-	t_ps	*last;
-	t_ps	*top;
 
 	i = 0;
-	l = ft_lstsize_ps(*stack_a);
-	top = *stack_a;
-	last = ft_lstlast_ps(*stack_a);
-	last->next = top;
+	top = *stack_b;
+	last = ft_lstlast_ps(*stack_b);
+	l = ft_lstsize_ps(*stack_b);
 	while (i < l - 2)
 	{
-		*stack_a = (*stack_a)->next;
+		*stack_b = (*stack_b)->next;
 		i++;
 	}
-	(*stack_a)->next = NULL;
-	*stack_a = last;
+	(*stack_b)->next = NULL;
+	last->next = top;
+	*stack_b = last;
 	if (yes == 1)
-		ft_printf("rra\n");
+		ft_printf("rrb\n");
 }
