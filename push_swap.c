@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 22:54:26 by marvin           ###   ########.fr       */
+/*   Updated: 2022/05/22 19:07:12 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,16 +95,16 @@ int	main(int ac, char *av[])
 	// ft_rb(&head_a, 1);
 	// ft_rrb(&head_a, 1);
 	// ft_printf("%d\n", ft_lstsize_ps(head_a));
-	ft_ratb(&head_a);
-	while(head_a != NULL)
-	{
-		ft_printf("stack_a: %d\n", head_a->data);
-		head_a = head_a->next;
-	}
-	while(head_b != NULL)
-	{
-		ft_printf("stack_b: %d\n", head_b->data);
-		head_b = head_b->next;
-	}
+	ft_4_num(&head_a, &head_b);
+	// while(head_a != NULL)
+	// {
+	// 	ft_printf("stack_a: %d\n", head_a->data);
+	// 	head_a = head_a->next;
+	// }
+	// while(head_b != NULL)
+	// {
+	// 	ft_printf("stack_b: %d\n", head_b->data);
+	// 	head_b = head_b->next;
+	// }
 	return (0);
 }

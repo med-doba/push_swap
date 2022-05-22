@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 22:51:18 by marvin           ###   ########.fr       */
+/*   Updated: 2022/05/22 18:05:42 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ void	ft_rr(t_ps **stack_a, t_ps **stack_b, int yes);
 void	ft_rra(t_ps **stack_a, int yes);
 void	ft_rrb(t_ps **stack_a, int yes);
 void	ft_rrr(t_ps **stack_a, t_ps **stack_b, int yes);
-void	ft_ratb(t_ps **stack_a);
+void	ft_3_num(t_ps **stack_a);
+void	ft_4_num(t_ps **stack_a, t_ps **stack_b);
 #endif
