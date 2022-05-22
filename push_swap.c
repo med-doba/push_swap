@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/22 19:07:12 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/22 22:47:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,12 +90,7 @@ int	main(int ac, char *av[])
 	free(tab_a);
 	if (ft_order(head_a) == 0)
 		return (free(my), 0);
-	// ft_pa(&head_a, &head_b, 1);
-	// ft_pb(&head_a, &head_b, 1);
-	// ft_rb(&head_a, 1);
-	// ft_rrb(&head_a, 1);
-	// ft_printf("%d\n", ft_lstsize_ps(head_a));
-	ft_4_num(&head_a, &head_b);
+	ft_5_num(&head_a, &head_b);
 	// while(head_a != NULL)
 	// {
 	// 	ft_printf("stack_a: %d\n", head_a->data);
