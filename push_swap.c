@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/22 22:47:21 by marvin           ###   ########.fr       */
+/*   Updated: 2022/05/23 16:37:23 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	main(int ac, char *av[])
 		exit (1);
 	if (ac == 1)
 	{
-		ft_printf("must an arg\n");
+		ft_printf("error: must an arg\n");
 		exit(1);
 	}
 	my->n = ft_test(ac, av);
@@ -90,7 +90,7 @@ int	main(int ac, char *av[])
 	free(tab_a);
 	if (ft_order(head_a) == 0)
 		return (free(my), 0);
-	ft_5_num(&head_a, &head_b);
+	ft_6_to_10(&head_a, &head_b);
 	// while(head_a != NULL)
 	// {
 	// 	ft_printf("stack_a: %d\n", head_a->data);
