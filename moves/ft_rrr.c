@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 18:29:54 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 18:34:06 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 22:16:43 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_rrr(t_ps **stack_a, t_ps **stack_b, int yes)
 	ft_rra(stack_a, 0);
 	ft_rrb(stack_b, 0);
 	if (yes == 1)
-	ft_printf("rrr\n");
+		ft_printf ("rrr\n");
 }

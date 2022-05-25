@@ -6,18 +6,18 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 19:32:47 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/21 17:45:26 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 22:21:44 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int ft_lstsize_ps(t_ps *lst)
+int	ft_lstsize_ps(t_ps *lst)
 {
 	int	i;
 
 	i = 0;
-	while(lst)
+	while (lst)
 	{
 		i++;
 		lst = lst->next;

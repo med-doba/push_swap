@@ -6,13 +6,13 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 19:33:17 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/19 19:33:19 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 22:21:29 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ft_lstdelone_ps(t_ps *lst, void (*del)(void *))
+void	ft_lstdelone_ps(t_ps *lst, void (*del)(void *))
 {
 	del(lst);
 }

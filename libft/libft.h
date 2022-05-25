@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 18:34:02 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/23 14:45:48 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 21:51:09 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 //bonus
 typedef struct s_list
 {
-	        void *content;
-		        struct s_list *next;
+	void		*content;
+	struct s_list	*next;
 } t_list;
-void ft_lstadd_back(t_list **lst, t_list *new);
-void ft_lstadd_front(t_list **lst, t_list *new);
-void ft_lstclear(t_list **lst, void (*del)(void*));
-void ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);

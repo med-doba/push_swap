@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 18:37:16 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/20 19:07:06 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 22:13:53 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_pa(t_ps **head_a, t_ps **head_b, int yes)
 {
-	t_ps *tmp;
+	t_ps	*tmp;
 
 	if (*head_b == NULL)
 		return ;

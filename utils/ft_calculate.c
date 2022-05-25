@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 15:12:45 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 15:53:31 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 22:22:49 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_calculate(char *str)
 		while (str[i] == ' ')
 			i++;
 		if (str[i] == '\0')
-			break;
+			break ;
 		if (str[i] != ' ' && str [i + 1] == ' ')
 			x++;
 		i++;

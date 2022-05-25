@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:33:12 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/20 19:03:52 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/25 22:18:19 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	ft_sa(t_ps **stack_a, int yes)
 {
+	t_ps	*tmp1;
+	t_ps	*tmp2;
+
+	tmp1 = ft_pop(stack_a);
+	tmp2 = ft_pop(stack_a);
 	if (*stack_a == NULL)
 		return ;
-
-	t_ps *tmp1 = ft_pop(stack_a);
-	t_ps *tmp2 = ft_pop(stack_a);
 	ft_push(stack_a, tmp1);
 	ft_push(stack_a, tmp2);
-	if(yes == 1)
+	if (yes == 1)
 		ft_printf("sa\n");
 }

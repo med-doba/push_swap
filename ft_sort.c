@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rb.c                                            :+:      :+:    :+:   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/21 16:21:06 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 22:16:21 by med-doba         ###   ########.fr       */
+/*   Created: 2022/05/25 21:28:10 by med-doba          #+#    #+#             */
+/*   Updated: 2022/05/25 21:42:36 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	ft_rb(t_ps **stack_b, int yes)
+void	ft_sort(t_ps **stack_a, t_ps **stack_b, t_var *my, int n)
 {
-	t_ps	*tmp;
-	t_ps	*head;
-
-	tmp = ft_pop(stack_b);
-	head = *stack_b;
-	while ((*stack_b)->next != NULL)
-		*stack_b = (*stack_b)->next;
-	if ((*stack_b)->next == NULL)
+	if (n <= 3)
+		ft_3_num(stack_a);
+	else if (n == 4)
+		ft_4_num(stack_a, stack_b);
+	else if (n == 5)
+		ft_5_num(stack_a, stack_b);
+	else if (n >= 6 && n <= 10)
+		ft_6_to_10(stack_a, stack_b, my);
+	else if (n > 10)
 	{
-		(*stack_b)->next = tmp;
-		tmp->next = NULL;
+		ft_index_stack(*stack_a);
+		ft_handle_cases(stack_a, stack_b, n);
+		ft_repush(stack_a, stack_b);
 	}
-	*stack_b = head;
-	if (yes == 1)
-		ft_printf("rb\n");
 }
