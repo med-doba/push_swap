@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 21:42:43 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/28 16:36:14 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,8 @@ void	ft_5_num(t_ps **stack_a, t_ps **stack_b);
 void	ft_6_to_10(t_ps **stack_a, t_ps **stack_b, t_var *my);
 void	ft_index_stack(t_ps *stack);
 void	ft_handle_cases(t_ps **stack_a, t_ps **stack_b, int n);
-int	ft_index_uper(t_ps *stack_b, int x);
-int	ft_uper_nbr(t_ps *stack_b);
+int		ft_index_uper(t_ps *stack_b, int x);
+int		ft_uper_nbr(t_ps *stack_b);
 void	ft_repush(t_ps **stack_a, t_ps **stack_b);
 void	ft_sort(t_ps **stack_a, t_ps **stack_b, t_var *my, int n);
 #endif

@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 21:43:22 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/28 16:33:07 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,15 +91,15 @@ int	main(int ac, char *av[])
 	if (ft_order(head_a) == 0)
 		return (free(my), 0);
 	ft_sort(&head_a, &head_b, my, my->n);
-	while(head_a != NULL)
-	{
-		ft_printf("stack_a: %d\n", head_a->data);
-		head_a = head_a->next;
-	}
-	while(head_b != NULL)
-	{
-		ft_printf("stack_b: %d\n", head_b->data);
-		head_b = head_b->next;
-	}
+	// while(head_a != NULL)
+	// {
+	// 	ft_printf("stack_a: %d\n", head_a->data);
+	// 	head_a = head_a->next;
+	// }
+	// while(head_b != NULL)
+	// {
+	// 	ft_printf("stack_b: %d\n", head_b->data);
+	// 	head_b = head_b->next;
+	// }
 	return (0);
 }
