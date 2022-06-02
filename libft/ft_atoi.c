@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:49:30 by med-doba          #+#    #+#             */
-/*   Updated: 2021/11/26 17:22:38 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/31 21:07:23 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+long	ft_atoi(char *str)
 {
-	int	j;
-	int	nb;
-	int	f;
+	int		j;
+	long	nb;
+	long	f;
 
 	j = 0;
 	nb = 1;

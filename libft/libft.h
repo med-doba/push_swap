@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 18:34:02 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 21:51:09 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/31 20:21:53 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 //malloc
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);

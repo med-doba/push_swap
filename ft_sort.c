@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 21:28:10 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 21:42:36 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/05/31 21:20:42 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_sort(t_ps **stack_a, t_ps **stack_b, t_var *my, int n)
 {
-	if (n <= 3)
+	if (n == 2)
+		ft_2_num(stack_a);
+	else if (n <= 3)
 		ft_3_num(stack_a);
 	else if (n == 4)
 		ft_4_num(stack_a, stack_b);

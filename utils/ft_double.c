@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_double.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 17:14:57 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/18 21:44:12 by marvin           ###   ########.fr       */
+/*   Updated: 2022/06/02 15:36:52 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	*ft_double(char **stack, t_var *my, int k)
+long	*ft_double(char **stack, t_var *my, int k)
 {
 	my->i = 1;
 	my->x = 0;
-	my->nbr = malloc(sizeof(int *) * k);
+	my->nbr = malloc(sizeof(long *) * k);
 	while (stack[my->i] != NULL)
 	{
 		my->j = 0;
@@ -29,7 +29,7 @@ int	*ft_double(char **stack, t_var *my, int k)
 			{
 				if (my->nbr[my->h] == my->y)
 				{
-					ft_printf("error: double\n");
+					ft_putendl_fd("Error", 2);
 					exit(1);
 				}
 				my->h++;
@@ -42,6 +42,7 @@ int	*ft_double(char **stack, t_var *my, int k)
 			my->j++;
 		}
 		my->i++;
+		ft_free_all(my->ptr);
 	}
 	return (my->nbr);
 }

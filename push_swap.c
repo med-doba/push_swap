@@ -6,11 +6,12 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/28 16:33:07 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/02 15:37:37 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 
 void	ft_ft(char *stack)
 {
@@ -22,13 +23,13 @@ void	ft_ft(char *stack)
 	j = 0;
 	if (stack[i] == '\0')
 	{
-		ft_printf("stack[i] == '\0'\n");
+		ft_putendl_fd("Error", 2);
 		exit (1);
 	}
 	str = ft_split(stack, ' ');
 	if (str == NULL)
 	{
-		ft_printf("str == NULL\n");
+		ft_putendl_fd("Error", 2);
 		exit(1);
 	}
 	while (str[i] != NULL)
@@ -40,7 +41,7 @@ void	ft_ft(char *stack)
 		{
 			if (ft_isdigit(str[i][j]) == 1)
 			{
-				ft_printf("ft_isdigit(str[i][j]) == 1\n");
+				ft_putendl_fd("Error", 2);
 				exit(1);
 			}
 			j++;
@@ -57,7 +58,8 @@ int	ft_test(int ac, char **av)
 
 	i = 1;
 	x = 0;
-	while (ac-- -1)
+
+	while (--ac)
 	{
 		ft_ft(av[i]);
 		x += ft_calculate(av[i]);
@@ -71,7 +73,7 @@ int	main(int ac, char *av[])
 	t_var	*my;
 	t_ps	*head_a;
 	t_ps	*head_b;
-	int		*tab_a;
+	long	*tab_a;
 
 	head_b = NULL;
 	my = (t_var *) malloc (sizeof(t_var) * 1);
@@ -79,27 +81,19 @@ int	main(int ac, char *av[])
 		exit (1);
 	if (ac == 1)
 	{
-		ft_printf("error: must an arg\n");
-		exit(1);
+		free(my);
+		exit(0);
 	}
 	my->n = ft_test(ac, av);
 	if (my->n == 1)
-		return (0);
+		return (free(my), 0);
 	tab_a = ft_double(av, my, my->n);
+	ft_min_max(tab_a, my->n);
 	head_a = ft_allocation(my->n, tab_a);
 	free(tab_a);
 	if (ft_order(head_a) == 0)
-		return (free(my), 0);
+		return (free(my), free_stack(&head_a), 0);
 	ft_sort(&head_a, &head_b, my, my->n);
-	// while(head_a != NULL)
-	// {
-	// 	ft_printf("stack_a: %d\n", head_a->data);
-	// 	head_a = head_a->next;
-	// }
-	// while(head_b != NULL)
-	// {
-	// 	ft_printf("stack_b: %d\n", head_b->data);
-	// 	head_b = head_b->next;
-	// }
-	return (0);
+	free_stack(&head_a);
+	return (free(my), 0);
 }
