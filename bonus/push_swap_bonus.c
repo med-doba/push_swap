@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 15:37:37 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/04 16:54:12 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 
 void	ft_ft(char *stack)
@@ -74,6 +74,7 @@ int	main(int ac, char *av[])
 	t_ps	*head_a;
 	t_ps	*head_b;
 	long	*tab_a;
+	char	*str;
 
 	head_b = NULL;
 	my = (t_var *) malloc (sizeof(t_var) * 1);
@@ -85,15 +86,23 @@ int	main(int ac, char *av[])
 		exit(0);
 	}
 	my->n = ft_test(ac, av);
-	if (my->n == 1)
-		return (free(my), 0);
+	// if (my->n == 1)
+	// 	return (free(my), 0);
 	tab_a = ft_double(av, my, my->n);
 	ft_min_max(tab_a, my->n);
 	head_a = ft_allocation(my->n, tab_a);
 	free(tab_a);
-	if (ft_order(head_a) == 0)
-		return (free(my), free_stack(&head_a), 0);
-	ft_sort(&head_a, &head_b, my, my->n);
+	str = get_next_line(0, 3);
+	while (str &&str[0] != '\n')
+	{
+		ft_detect(str, &head_a, &head_a);
+		free(str);
+		str = get_next_line(0, 3);
+	}
+	if (ft_order(head_a) == 0 && ft_lstsize_ps(head_a) != 0)
+		ft_printf("OK\n");
+	else
+		ft_printf("KO\n");
 	free_stack(&head_a);
 	return (free(my), 0);
 }

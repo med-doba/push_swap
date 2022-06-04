@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sa.c                                            :+:      :+:    :+:   */
+/*   ft_pa.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 13:33:12 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 22:18:19 by med-doba         ###   ########.fr       */
+/*   Created: 2022/05/20 18:37:16 by med-doba          #+#    #+#             */
+/*   Updated: 2022/06/02 16:39:20 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../push_swap_bonus.h"
 
-void	ft_sa(t_ps **stack_a, int yes)
+void	ft_pa(t_ps **head_a, t_ps **head_b, int yes)
 {
-	t_ps	*tmp1;
-	t_ps	*tmp2;
+	t_ps	*tmp;
 
-	tmp1 = ft_pop(stack_a);
-	tmp2 = ft_pop(stack_a);
-	if (*stack_a == NULL)
+	if (*head_b == NULL)
 		return ;
-	ft_push(stack_a, tmp1);
-	ft_push(stack_a, tmp2);
+	tmp = ft_pop(head_b);
+	ft_push(head_a, tmp);
 	if (yes == 1)
-		ft_printf("sa\n");
+		ft_printf("pa\n");
 }
