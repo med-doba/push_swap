@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ra.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 19:01:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 16:39:08 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/06 00:49:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_ra(t_ps **stack_a, int yes)
 	t_ps	*tmp;
 	t_ps	*head;
 
+	if (ft_lstsize_ps(*stack_a) < 2)
+		return ;
 	tmp = ft_pop(stack_a);
 	head = *stack_a;
 	while ((*stack_a)->next != NULL)

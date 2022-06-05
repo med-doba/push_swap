@@ -22,8 +22,8 @@ SRC_BONUS= bonus/push_swap_bonus.c bonus/utils/ft_calculate.c bonus/utils/ft_dou
 	bonus/moves/ft_pb.c bonus/moves/ft_pa.c bonus/moves/ft_ss.c bonus/moves/ft_ra.c bonus/moves/ft_rb.c bonus/moves/ft_rr.c \
 	bonus/moves/ft_rra.c bonus/moves/ft_rrb.c bonus/utils/ft_min_max.c \
 	bonus/moves/ft_rrr.c bonus/algorithme/algo00.c bonus/algorithme/algo01.c bonus/algorithme/algo02.c bonus/algorithme/algo03.c \
-	bonus/ft_sort_bonus.c bonus/ft_detect.c bonus/ft_strcmp.c get_next_line/get_next_line.c\
-	get_next_line/get_next_line_utils.c
+	bonus/ft_sort_bonus.c bonus/ft_detect.c bonus/ft_strcmp.c GNL/get_next_line.c\
+	GNL/get_next_line_utils.c
 
 INC= push_swap.h
 

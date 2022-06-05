@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 18:31:24 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 16:40:48 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/05 17:50:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_6_to_10(t_ps **stack_a, t_ps **stack_b, t_var *my)
 {
-	t_ps	*tmp;
+	// t_ps	*tmp;
 
 	my->k = 0;
-	tmp = *stack_a;
+	// tmp = *stack_a;
 	my->j = ft_lstsize_ps(*stack_a);
 	while (my->j-- > 5)
 	{

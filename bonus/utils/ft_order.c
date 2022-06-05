@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_order.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 11:51:21 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 16:37:46 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/06 00:41:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_order(t_ps *node)
 {
+	if (node == NULL)
+		return (1);
 	while (node->next != NULL)
 	{
 		if (node->data > node->next->data)

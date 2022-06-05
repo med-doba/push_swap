@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sa.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 13:33:12 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/04 16:53:23 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/05 18:14:07 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_sa(t_ps **stack_a, int yes)
 {
 	int		tmp;
 
+	if (ft_lstsize_ps(*stack_a) < 2)
+		return ;
 	if (*stack_a && (*stack_a)->next)
 	{
 		tmp = (*stack_a)->data;

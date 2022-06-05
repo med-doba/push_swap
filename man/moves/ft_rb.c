@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 16:21:06 by med-doba          #+#    #+#             */
-/*   Updated: 2022/05/25 22:16:21 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/06 00:50:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_rb(t_ps **stack_b, int yes)
 	t_ps	*tmp;
 	t_ps	*head;
 
+	if (ft_lstsize_ps(*stack_b) < 2)
+		return ;
 	tmp = ft_pop(stack_b);
 	head = *stack_b;
 	while ((*stack_b)->next != NULL)

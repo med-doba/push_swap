@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 18:14:48 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/05 17:40:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include "../libft/libft.h"
 # include "../ft_printf/ft_printf.h"
-# include "../get_next_line/get_next_line.h"
+# include "../GNL/get_next_line.h"
 
 typedef struct p_var{
 	char	**ptr;
