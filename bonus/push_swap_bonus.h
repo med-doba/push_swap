@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/05 17:40:15 by marvin           ###   ########.fr       */
+/*   Updated: 2022/06/07 19:48:10 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include "../ft_printf/ft_printf.h"
 # include "../GNL/get_next_line.h"
 
+typedef struct node{
+	int			data;
+	int			index;
+	struct node	*next;
+}t_ps;
+
 typedef struct p_var{
 	char	**ptr;
 	long	*nbr;
@@ -31,13 +37,11 @@ typedef struct p_var{
 	int		h;
 	int		k;
 	int		l;
+	t_ps	*head_a;
+	t_ps	*head_b;
+	long	*tab_a;
+	char	*str;
 }t_var;
-
-typedef struct node{
-	int			data;
-	int			index;
-	struct node	*next;
-}t_ps;
 
 int		ft_digits(char *stack);
 int		ft_nbr(char str);
@@ -88,5 +92,6 @@ void	ft_min_max(long *tab, int n);
 void	ft_2_num(t_ps **stack_a);
 //bonus
 void	ft_detect(char *str, t_ps **stack_a, t_ps **stack_b);
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
+void	ft_end(void);
 #endif

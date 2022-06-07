@@ -14,9 +14,6 @@
 
 void	ft_6_to_10(t_ps **stack_a, t_ps **stack_b, t_var *my)
 {
-// 	t_ps	*tmp;
-
-// 	tmp = *stack_a;
 	my->k = 0;
 	my->j = ft_lstsize_ps(*stack_a);
 	while (my->j-- > 5)

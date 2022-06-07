@@ -14,16 +14,15 @@
 
 void	ft_sa(t_ps **stack_a, int yes)
 {
-	int		tmp;
+	t_ps	*tmp1;
+	t_ps	*tmp2;
 
 	if (ft_lstsize_ps(*stack_a) < 2)
 		return ;
-	if (*stack_a && (*stack_a)->next)
-	{
-		tmp = (*stack_a)->data;
-		(*stack_a)->data = (*stack_a)->next->data;
-		(*stack_a)->next->data = tmp;
-	}
+	tmp1 = ft_pop(stack_a);
+	tmp2 = ft_pop(stack_a);
+	ft_push(stack_a, tmp1);
+	ft_push(stack_a, tmp2);
 	if (yes == 1)
 		ft_printf("sa\n");
 }

@@ -59,8 +59,6 @@ void	ft_handle_cases(t_ps **stack_a, t_ps **stack_b, int n)
 		}
 		else
 			ft_ra(stack_a, 1);
-		// if (ft_lstsize_ps(*stack_b) > 1 && (*stack_b)->index > (*stack_b)->next->index)
-		// 	ft_sb(stack_b, 1);
 	}
 }
 

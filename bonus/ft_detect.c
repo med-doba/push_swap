@@ -12,6 +12,14 @@
 
 #include "push_swap_bonus.h"
 
+void	ft_norminette(t_ps **stack_a, t_ps **stack_b)
+{
+	ft_putendl_fd("Error", 2);
+	free_stack(stack_a);
+	free_stack(stack_b);
+	exit(1);
+}
+
 void	ft_detect(char *str, t_ps **stack_a, t_ps **stack_b)
 {
 	if (!ft_strcmp(str, "sa\n"))
@@ -37,10 +45,5 @@ void	ft_detect(char *str, t_ps **stack_a, t_ps **stack_b)
 	else if (!ft_strcmp(str, "rrr\n"))
 		ft_rrr(stack_a, stack_b, 0);
 	else
-	{
-		write(2, "Error\n", 6);
-		free_stack(stack_a);
-		free_stack(stack_b);
-		exit(1);
-	}
+		ft_norminette(stack_a, stack_b);
 }
