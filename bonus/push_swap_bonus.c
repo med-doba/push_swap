@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/07 19:48:27 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/07 23:19:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_end(void)
 	exit (1);
 }
 
-void	ft_ft(char *stack)
+void	ft_handle(char *stack)
 {
 	char	**str;
 	int		j;
@@ -47,7 +47,7 @@ void	ft_ft(char *stack)
 	ft_free_all(str);
 }
 
-int	ft_test(int ac, char **av)
+int	ft_how_arg(int ac, char **av)
 {
 	int	i;
 	int	x;
@@ -56,7 +56,7 @@ int	ft_test(int ac, char **av)
 	x = 0;
 	while (--ac)
 	{
-		ft_ft(av[i]);
+		ft_handle(av[i]);
 		x += ft_calculate(av[i]);
 		i++;
 	}
@@ -79,7 +79,7 @@ int	main(int ac, char *av[])
 	my->head_b = NULL;
 	if (my == NULL || ac == 1)
 		ft_ter(my);
-	my->n = ft_test(ac, av);
+	my->n = ft_how_arg(ac, av);
 	my->tab_a = ft_double(av, my, my->n);
 	ft_min_max(my->tab_a, my->n);
 	my->head_a = ft_allocation(my->n, my->tab_a);
