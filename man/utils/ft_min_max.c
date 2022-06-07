@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_min_max.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 19:01:54 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 15:38:35 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/07 08:39:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_min_max(long *tab, int n)
 		if (tab[i] > 2147483647 || tab[i] < -2147483648)
 		{
 			ft_putendl_fd("Error", 2);
+			free(tab);
 			exit(1);
 		}
 		i++;

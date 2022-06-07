@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/02 17:28:30 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/07 07:59:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 
-void	ft_ft(char *stack)
+void	ft_handle_arg(char *stack)
 {
 	char	**str;
 	int	j;
@@ -51,7 +51,7 @@ void	ft_ft(char *stack)
 	ft_free_all(str);
 }
 
-int	ft_test(int ac, char **av)
+int	ft_how_arg(int ac, char **av)
 {
 	int	i;
 	int	x;
@@ -61,7 +61,7 @@ int	ft_test(int ac, char **av)
 
 	while (--ac)
 	{
-		ft_ft(av[i]);
+		ft_handle_arg(av[i]);
 		x += ft_calculate(av[i]);
 		i++;
 	}
@@ -84,7 +84,7 @@ int	main(int ac, char *av[])
 		free(my);
 		exit(0);
 	}
-	my->n = ft_test(ac, av);
+	my->n = ft_how_arg(ac, av);
 	if (my->n == 1)
 		return (free(my), 0);
 	tab_a = ft_double(av, my, my->n);
