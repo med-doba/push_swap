@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/08 14:47:16 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:18:09 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	main(int ac, char *av[])
 	my->n = ft_how_arg(ac, av, my);
 	if (my->n == 1)
 		return (free(my), 0);
-	my->tab_a = ft_double(av, my, my->n);
+	my->tab_a = ft_double(av, my);
 	ft_min_max(my);
 	my->head_a = ft_allocation(my);
 	free(my->tab_a);

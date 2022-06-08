@@ -3,22 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:39:39 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/07 23:19:37 by marvin           ###   ########.fr       */
+/*   Updated: 2022/06/08 15:19:31 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-void	ft_end(void)
+void	ft_end(char **str, t_var *my)
 {
+	free(my);
+	if (str != NULL)
+		ft_free_all(str);
 	ft_putendl_fd("Error", 2);
-	exit (1);
+	exit(1);
 }
 
-void	ft_handle(char *stack)
+void	ft_handle_arg(char *stack, t_var *my)
 {
 	char	**str;
 	int		j;
@@ -26,11 +29,11 @@ void	ft_handle(char *stack)
 
 	i = 0;
 	j = 0;
-	if (stack[i] == '\0')
-		ft_end();
 	str = ft_split(stack, ' ');
 	if (str == NULL)
-		ft_end();
+		ft_end(str, my);
+	if (stack[i] == '\0')
+		ft_end(str, my);
 	while (str[i] != NULL)
 	{
 		j = 0;
@@ -39,7 +42,7 @@ void	ft_handle(char *stack)
 		while (str[i][j] != '\0')
 		{
 			if (ft_isdigit(str[i][j]) == 1)
-				ft_end();
+				ft_end(str, my);
 			j++;
 		}
 		i++;
@@ -47,7 +50,7 @@ void	ft_handle(char *stack)
 	ft_free_all(str);
 }
 
-int	ft_how_arg(int ac, char **av)
+int	ft_how_arg(int ac, char **av, t_var *my)
 {
 	int	i;
 	int	x;
@@ -56,7 +59,7 @@ int	ft_how_arg(int ac, char **av)
 	x = 0;
 	while (--ac)
 	{
-		ft_handle(av[i]);
+		ft_handle_arg(av[i], my);
 		x += ft_calculate(av[i]);
 		i++;
 	}
@@ -76,13 +79,13 @@ int	main(int ac, char *av[])
 	t_var	*my;
 
 	my = (t_var *) malloc (sizeof(t_var) * 1);
-	my->head_b = NULL;
 	if (my == NULL || ac == 1)
 		ft_ter(my);
-	my->n = ft_how_arg(ac, av);
-	my->tab_a = ft_double(av, my, my->n);
-	ft_min_max(my->tab_a, my->n);
-	my->head_a = ft_allocation(my->n, my->tab_a);
+	my->head_b = NULL;
+	my->n = ft_how_arg(ac, av, my);
+	my->tab_a = ft_double(av, my);
+	ft_min_max(my);
+	my->head_a = ft_allocation(my);
 	free(my->tab_a);
 	my->str = get_next_line(0, 3);
 	while (my->str)

@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 17:14:57 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/08 13:03:30 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:18:27 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	ft_while(t_var *my)
 	}
 }
 
-long	*ft_double(char **stack, t_var *my, int k)
+long	*ft_double(char **stack, t_var *my)
 {
-	my->nbr = malloc(sizeof(long *) * k);
+	my->nbr = malloc(sizeof(long *) * my->n);
 	if (my->nbr == NULL)
 		return (free(my), exit(1), NULL);
 	while (stack[++my->i] != NULL)

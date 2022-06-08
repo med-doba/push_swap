@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/08 13:29:43 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/08 15:18:45 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		ft_nbr(char str);
 int		ft_duplicate(char *stack);
 int		ft_signe(char *stack);
 int		ft_calculate(char *str, t_var *my);
-long	*ft_double(char **stack, t_var *my, int k);
+long	*ft_double(char **stack, t_var *my);
 void	ft_free_all(char **str);
 //node
 t_ps	*ft_node_create(int data);
