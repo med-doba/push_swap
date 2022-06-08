@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calculate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 15:12:45 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/07 08:09:54 by marvin           ###   ########.fr       */
+/*   Updated: 2022/06/08 13:01:29 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_calculate(char *str)
+int	ft_calculate(char *str, t_var *my)
 {
 	int	i;
 	int	x;
@@ -22,7 +22,8 @@ int	ft_calculate(char *str)
 	if (str[i] == ' ' && str[i + 1] == '\0')
 	{
 		ft_putendl_fd("Error", 2);
-		exit (1);
+		free(my);
+		exit(1);
 	}
 	while (str[i] != '\0')
 	{

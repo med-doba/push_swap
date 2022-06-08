@@ -6,7 +6,7 @@
 /*   By: med-doba <med-doba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 18:40:48 by med-doba          #+#    #+#             */
-/*   Updated: 2022/06/07 19:28:24 by med-doba         ###   ########.fr       */
+/*   Updated: 2022/06/08 13:29:43 by med-doba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		ft_digits(char *stack);
 int		ft_nbr(char str);
 int		ft_duplicate(char *stack);
 int		ft_signe(char *stack);
-int		ft_calculate(char *str);
+int		ft_calculate(char *str, t_var *my);
 long	*ft_double(char **stack, t_var *my, int k);
 void	ft_free_all(char **str);
 //node
@@ -55,7 +55,7 @@ void	ft_lstdelone_ps(t_ps *lst, void (*del)(void *));
 void	ft_lstclear_ps(t_ps **lst, void (*del)(void*));
 void	ft_lstadd_front_ps(t_ps **lst, t_ps *new);
 void	ft_lstadd_back_ps(t_ps **lst, t_ps *new);
-t_ps	*ft_allocation(int size, long *tab);
+t_ps	*ft_allocation(t_var *my);
 int		ft_order(t_ps *node);
 void	ft_push(t_ps **head, t_ps *add);
 t_ps	*ft_pop(t_ps **stack);
@@ -84,8 +84,8 @@ void	ft_handle_cases(t_ps **stack_a, t_ps **stack_b, int n);
 int		ft_index_uper(t_ps *stack_b, int x);
 int		ft_uper_nbr(t_ps *stack_b);
 void	ft_repush(t_ps **stack_a, t_ps **stack_b);
-void	ft_sort(t_ps **stack_a, t_ps **stack_b, t_var *my, int n);
-void	ft_min_max(long *tab, int n);
+void	ft_sort(t_var *my);
+void	ft_min_max(t_var *my);
 void	ft_2_num(t_ps **stack_a);
-void	ft_end(void);
+void	ft_end(char **str, t_var *my);
 #endif
